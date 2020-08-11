@@ -9,19 +9,35 @@ public class Exercise2 {
     public static int Biology;
     public static int total;
     public static int percentage;
+    public static int PGrade;
+    public static int CGrade;
+    public static int BGrade;
 
     public static void main(String[] args) {
 
-        Physics = 12;
-        Chemistry = 10;
-        Biology = 10;
+        Physics = 120;
+        Chemistry = 100;
+        Biology = 100;
         total = Physics + Chemistry + Biology;
+        PGrade = Physics*100/150;
+        BGrade = Biology*100/150;
+        CGrade = Chemistry*100/150;
+
+
+
 
         System.out.println("Chemistry:"+ Chemistry);
         System.out.println("Physics:" + Physics);
         System.out.println("Biology:" + Biology);
         System.out.println("Total:" + total);
+
         result();
+
+        if (PGrade < 60 | CGrade < 60 | BGrade < 60){
+            System.out.println("You failed, You suck");
+            return;
+        }
+
         pass();
 
     }
