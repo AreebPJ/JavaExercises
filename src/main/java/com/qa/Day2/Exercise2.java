@@ -15,9 +15,9 @@ public class Exercise2 {
 
     public static void main(String[] args) {
 
-        Physics = 120;
-        Chemistry = 100;
-        Biology = 100;
+        Physics = 150;
+        Chemistry = 150;
+        Biology = 150;
         total = Physics + Chemistry + Biology;
         PGrade = Physics*100/150;
         BGrade = Biology*100/150;
@@ -31,26 +31,28 @@ public class Exercise2 {
         System.out.println("Biology:" + Biology);
         System.out.println("Total:" + total);
 
-        result();
+        result(total);
 
         if (PGrade < 60 | CGrade < 60 | BGrade < 60){
             System.out.println("You failed, You suck");
             return;
         }
 
-        pass();
+        pass(percentage);
 
     }
-    public static void result(){
+    public static double result(int total){
         percentage = total * 100 /450;
         System.out.println("Percentage:" + percentage + "%");
+        return percentage;
     }
-    public static void pass(){
+    public static int pass(int percentage){
         if (percentage > 60){
             System.out.println("Congratulations, You Have passed");
         } else {
             System.out.println("You failed, You suck");
         }
+        return percentage;
     }
 }
 /** Create the results class, this class has 5 variables, Physics, Chemistry, and Biology, total and percentage.

@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 
 import com.qa.Day2.Day2;
+import com.qa.Day2.Exercise2;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -43,6 +44,20 @@ public class AppTest
     {
         Day2 calc = new Day2 ();
         assertEquals(0,calc.division(10,20),0);
+
+    }
+    @Test
+    public void result()
+    {
+        Exercise2 calc = new Exercise2 ();
+        assertEquals(100,calc.result(450),0);
+
+    }
+    @Test
+    public void pass()
+    {
+        Exercise2 calc = new Exercise2 ();
+        assertEquals(100,calc.pass(100));
 
     }
 }
