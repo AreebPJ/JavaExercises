@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import com.qa.Day2.Day2;
 import com.qa.Day2.Exercise2;
+import com.qa.Day3.Blackjack;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -58,6 +59,18 @@ public class AppTest
     {
         Exercise2 calc = new Exercise2 ();
         assertEquals(100,calc.pass(100));
+
+    }
+    @Test
+    public void blackjack()
+    {
+        Blackjack calc = new Blackjack ();
+        assertEquals(1,calc.blackjack(1,22));
+        assertEquals(0,calc.blackjack(21,21));
+        assertEquals(0,calc.blackjack(21,21));
+        assertEquals(50,calc.blackjack(50,20));
+        assertEquals(2,calc.blackjack(1,2));
+        assertEquals(50,calc.blackjack(5,20));
 
     }
 }

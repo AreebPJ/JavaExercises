@@ -2,7 +2,7 @@ package com.qa.Day3;
 
 public class Blackjack {
     public static void main(String[] args){
-        blackjack(1,22);
+        blackjack(50,20);
 
     }
     public static int blackjack(int a, int b){
@@ -10,11 +10,20 @@ public class Blackjack {
             System.out.println("0");
             return 0;
         }
-        if (a > b | a<21 | b<21){
-            System.out.println(a);
-        }else {
-            System.out.println(b);
+        if (a<21 & b<21){
+            if (a > b){
+                System.out.println(a);
+            }else {
+                System.out.println(b);
+            }
+        } else {
+            if (a<21 & b>21){
+                System.out.println(a);
+            } else{
+                System.out.println(b);
+            }
         }
+
         return a;
     }
 }
